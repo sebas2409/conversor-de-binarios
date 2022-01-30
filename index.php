@@ -43,8 +43,7 @@ if (isset($_POST['Convertir'])){
         case 'Hexadecimal':echo "<p>El resultado es: ".dechex(bindec($numero))."</p>";
             break;
         case  'Octal': {
-            $decimal = bindec($numero);
-            echo "<p>El resultado es: ".decoct($decimal)."</p>";
+            echo "<p>El resultado es: ".decoct(bindec($numero))."</p>";
             break;
         }
         default: echo "Error, no has seleccionado un tipo";
